@@ -1,0 +1,32 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<h3 class="text-center m-4">Student Details</h3>
+
+<div class="table-responsive">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col"><strong> Student Number</strong></th>
+        <th scope="col"><strong>First Name</strong></th>
+        <th scope="col"><strong>Last Name</strong></th>
+        <th scope="col"><strong>Email</strong></th>
+        <th scope="col"><strong>Field of Study</strong></th>
+        <th scope="col"><strong>gpa</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{student.student_number}}</td>
+        <td>{{student.first_name}}</td>
+        <td>{{student.last_name}}</td>
+        <td>{{student.email}}</td>
+        <td>{{student.field_of_study}}</td>
+        <td>{{student.gpa}}</td>
+  </table>
+  </div>
+
+  <div class="alert alert-success item-center" role="alert">
+    <a href="{% url 'index' %}" class="alert-link">Go to home page</a>
+  </div>
+{% endblock %}
